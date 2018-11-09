@@ -30,7 +30,7 @@ public class IconFactory {
 
 		if (icon == null) {
 			try {
-				icon = new ImageIcon(IconFactory.class.getResource("/ui_icons/" + iconName)); //$NON-NLS-1$
+				icon = new ImageIcon(IconFactory.class.getResource("uiicons/" + iconName)); //$NON-NLS-1$
 				iconCache.put(iconName, icon);
 			} catch (Exception x) {
 				return getDefaultIcon(iconName);

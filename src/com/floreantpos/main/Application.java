@@ -120,7 +120,7 @@ public class Application {
 	public void start() {
 		setApplicationLook();
 
-		applicationIcon = IconFactory.getIcon("ui/icons/","icon.png"); //$NON-NLS-1$
+		applicationIcon = IconFactory.getIcon("uiicons/","icon.png"); //$NON-NLS-1$
 		posWindow = new PosWindow();
 		posWindow.setTitle(getTitle());
 		posWindow.setIconImage(applicationIcon.getImage());
