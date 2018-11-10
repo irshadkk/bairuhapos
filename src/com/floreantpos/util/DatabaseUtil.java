@@ -40,6 +40,7 @@ import com.floreantpos.config.TerminalConfig;
 import com.floreantpos.model.CashDrawer;
 import com.floreantpos.model.Currency;
 import com.floreantpos.model.Discount;
+import com.floreantpos.model.FlorantLicenceKey;
 import com.floreantpos.model.MenuItemSize;
 import com.floreantpos.model.Multiplier;
 import com.floreantpos.model.OrderType;
@@ -55,6 +56,7 @@ import com.floreantpos.model.UserPermission;
 import com.floreantpos.model.UserType;
 import com.floreantpos.model.dao.CurrencyDAO;
 import com.floreantpos.model.dao.DiscountDAO;
+import com.floreantpos.model.dao.FlorantLicenceKeyDAO;
 import com.floreantpos.model.dao.GenericDAO;
 import com.floreantpos.model.dao.MenuItemSizeDAO;
 import com.floreantpos.model.dao.MultiplierDAO;
@@ -103,7 +105,7 @@ public class DatabaseUtil {
 			throw new DatabaseConnectionException(e);
 		}
 	}
-
+        
 	public static void updateLegacyDatabase() {
 		try {
 			dropModifiedTimeColumn();

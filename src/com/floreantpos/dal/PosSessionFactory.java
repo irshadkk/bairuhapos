@@ -39,7 +39,7 @@ public class PosSessionFactory {
      * <code>CONFIG_FILE_LOCATION = "/hibernate.conf.xml". 
      * CONFIG_FILE_LOCATION = "/com/foo/bar/myhiberstuff.conf.xml".</code> 
      */
-    private static String CONFIG_FILE_LOCATION = "/hibernate.cfg.xml"; //$NON-NLS-1$
+    private static String CONFIG_FILE_LOCATION = "/ihbernate.cfg.xml"; //$NON-NLS-1$
 
     /** Holds a single instance of Session */
 	private static final ThreadLocal<Session> threadLocal = new ThreadLocal<Session>();

@@ -42,6 +42,7 @@ import com.floreantpos.model.Discount;
 import com.floreantpos.model.DrawerAssignedHistory;
 import com.floreantpos.model.DrawerPullReport;
 import com.floreantpos.model.EmployeeInOutHistory;
+import com.floreantpos.model.FlorantLicenceKey;
 import com.floreantpos.model.GlobalConfig;
 import com.floreantpos.model.Gratuity;
 import com.floreantpos.model.GuestCheckPrint;
@@ -186,6 +187,7 @@ public abstract class _RootDAO extends com.floreantpos.model.dao._BaseRootDAO {
 		configuration.addClass(CurrencyBalance.class);
 		configuration.addClass(GlobalConfig.class);
 		configuration.addClass(MenuItemSize.class);
+                configuration.addClass(FlorantLicenceKey.class);
 		configuration.addClass(PizzaCrust.class);
 		configuration.addClass(PizzaPrice.class);
 		configuration.addClass(PizzaModifierPrice.class);

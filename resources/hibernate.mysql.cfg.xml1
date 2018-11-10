@@ -5,19 +5,19 @@
 
 <hibernate-configuration>
 	<session-factory>
-		<!-- property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property -->
-		<property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
+		 <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<!--<property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>-->
 
-		<property name="hibernate.connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>
-		<property name="hibernate.connection.url">jdbc:derby://localhost/posdb</property>
+<!--		<property name="hibernate.connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>
+		<property name="hibernate.connection.url">jdbc:derby://localhost/posdb</property>-->
 
 		<!-- <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.EmbeddedDriver</property> -->
 		<!-- <property name="hibernate.connection.url">jdbc:derby:posdb;create=true</property> -->
 
-		<property name="hibernate.connection.username">app</property>
-		<property name="hibernate.connection.password">sa</property>
-		<!-- property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property -->
-		<!-- property name="hibernate.connection.url">jdbc:mysql://localhost/pos</property -->
+		<property name="hibernate.connection.username">floreant</property>
+		<property name="hibernate.connection.password">floreant</property>
+		 <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property >
+		 <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/posdb?characterEncoding=UTF-8</property>
 		<property name="hbm2ddl.auto">update</property>
 		<property name="hibernate.connection.autocommit">false</property>
 		<property name="hibernate.max_fetch_depth">3</property>
@@ -57,5 +57,6 @@
 		<mapping resource="com/floreantpos/model/UserPermission.hbm.xml" />
 		<mapping resource="com/floreantpos/model/UserType.hbm.xml" />
 		<mapping resource="com/floreantpos/model/CustomPayment.hbm.xml" />
+                <mapping resource="com/floreantpos/model/FlorantLicenceKey.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>
