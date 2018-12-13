@@ -745,8 +745,7 @@ public class OrderView extends ViewPanel implements PaymentListener, TicketEditL
     }
 
     protected void doAddEditWaiter() {
-        java.util.List<com.floreantpos.model.base.BaseWaiter> lst = BaseWaiterDAO.getInstance().findAll();
-        System.out.println("com.floreantpos.ui.views.order.OrderView.doAddEditWaiter()" + lst.size());
+        java.util.List<com.floreantpos.model.base.BaseWaiter> lst = BaseWaiterDAO.getInstance().findAll(); 
 
         WaiterSelectionView dialog = new WaiterSelectionView(lst);
         dialog.setSize(400, 680);
@@ -758,7 +757,7 @@ public class OrderView extends ViewPanel implements PaymentListener, TicketEditL
         }
 
 //            ticketView.getTicketViewerTable().updateView();
-        currentTicket.setWaitererId(dialog.getSelectedWaiter());
+        currentTicket.setWaitererId(dialog.getSelectedWaiterId());
         btnWaiter.setText("<html><body><center>CUSTOMER<br>\"" + dialog.getSelectedWaiter() + "\"</center></body></html>");
 
     }

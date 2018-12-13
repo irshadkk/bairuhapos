@@ -23,7 +23,8 @@ import net.miginfocom.swing.MigLayout;
  */
 public class WaiterSelectionView extends OkCancelOptionDialog {
 
-    private int selectedWaiter;
+    private int selectedWaiterId;
+    private String selectedWaiter;
 
     public WaiterSelectionView(java.util.List<com.floreantpos.model.base.BaseWaiter> lst) {
         super(Application.getPosWindow(), true);
@@ -60,7 +61,10 @@ public class WaiterSelectionView extends OkCancelOptionDialog {
                 // do some actions here, for example
                 // print first column value from selected row
                 System.out.println(jt.getValueAt(jt.getSelectedRow(), 0).toString());
-                selectedWaiter = Integer.parseInt(jt.getValueAt(jt.getSelectedRow(), 0).toString());
+                selectedWaiterId = Integer.parseInt(jt.getValueAt(jt.getSelectedRow(), 0).toString());
+                selectedWaiter = jt.getValueAt(jt.getSelectedRow(), 1).toString();
+                setCanceled(false);
+                dispose();
             }
         });
 
@@ -73,11 +77,19 @@ public class WaiterSelectionView extends OkCancelOptionDialog {
 
     }
 
-    public int getSelectedWaiter() {
+    public int getSelectedWaiterId() {
+        return selectedWaiterId;
+    }
+
+    public void setSelectedWaiterId(int selectedWaiterId) {
+        this.selectedWaiterId = selectedWaiterId;
+    }
+
+    public String getSelectedWaiter() {
         return selectedWaiter;
     }
 
-    public void setSelectedWaiter(int selectedWaiter) {
+    public void setSelectedWaiter(String selectedWaiter) {
         this.selectedWaiter = selectedWaiter;
     }
 
