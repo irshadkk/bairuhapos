@@ -101,6 +101,7 @@ import com.floreantpos.model.UserType;
 import com.floreantpos.model.VirtualPrinter;
 import com.floreantpos.model.VoidReason;
 import com.floreantpos.model.ZipCodeVsDeliveryCharge;
+import com.floreantpos.model.base.BaseWaiter;
 
 public abstract class _RootDAO extends com.floreantpos.model.dao._BaseRootDAO {
 
@@ -187,7 +188,7 @@ public abstract class _RootDAO extends com.floreantpos.model.dao._BaseRootDAO {
 		configuration.addClass(CurrencyBalance.class);
 		configuration.addClass(GlobalConfig.class);
 		configuration.addClass(MenuItemSize.class);
-                configuration.addClass(FlorantLicenceKey.class);
+                
 		configuration.addClass(PizzaCrust.class);
 		configuration.addClass(PizzaPrice.class);
 		configuration.addClass(PizzaModifierPrice.class);
@@ -195,7 +196,8 @@ public abstract class _RootDAO extends com.floreantpos.model.dao._BaseRootDAO {
 		configuration.addClass(ModifierMultiplierPrice.class);
 		configuration.addClass(TaxGroup.class);
 		configuration.addClass(GuestCheckPrint.class);
-
+                configuration.addClass(FlorantLicenceKey.class);
+                configuration.addClass(BaseWaiter.class);
 		configureInventoryClasses(configuration);
 
 		Database defaultDatabase = AppConfig.getDefaultDatabase();

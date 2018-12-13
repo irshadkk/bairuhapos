@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.floreantpos.model.base">
+    <class lazy="false" name="com.floreantpos.model.base.BaseWaiter"  table="waiter">
+        <id column="ID" name="id" type="java.lang.Integer">
+            <generator class="identity" />
+        </id> 
+        <property name="waiterName" column="WAITER_NAME" length="120" type="string"/> 
+        <property name="waiterMobile" column="WAITER_MOBILE" length="120" type="string"/> 
+        <property name="waiterAddress" column="WAITER_ADDRESS" length="120" type="string"/> 
+		 
+    </class>
+</hibernate-mapping>
