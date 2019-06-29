@@ -8,7 +8,6 @@ package com.floreantpos.ui.views;
 import com.floreantpos.Messages;
 import com.floreantpos.main.Application;
 import com.floreantpos.ui.dialog.OkCancelOptionDialog;
-import static com.sun.xml.internal.fastinfoset.alphabet.BuiltInRestrictedAlphabets.table;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;

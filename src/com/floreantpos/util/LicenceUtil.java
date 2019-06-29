@@ -19,6 +19,7 @@ import java.net.UnknownHostException;
 public class LicenceUtil {
 
     public static void checkLicenceValidity() {
+        System.out.println("checking licence validity");
         FlorantLicenceKey florantLicenceKey = FlorantLicenceKeyDAO.getInstance().get(1);
         if (null ==florantLicenceKey) {
             System.exit(0);
@@ -26,6 +27,7 @@ public class LicenceUtil {
         else if (!getMacAddress().equals(florantLicenceKey.getKeyvalue())) {
             System.exit(0);
         }
+        
     }
 
     public static String getMacAddress() {

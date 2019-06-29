@@ -29,8 +29,8 @@ public class AppConfig {
 	public static final String DATABASE_URL = "localhost"; //$NON-NLS-1$
 	public static final String DATABASE_PORT = "3306"; //$NON-NLS-1$
 	public static final String DATABASE_NAME = "posdb"; //$NON-NLS-1$
-	public static final String DATABASE_USER = "floreant"; //$NON-NLS-1$
-	public static final String DATABASE_PASSWORD = "floreant"; //$NON-NLS-1$
+	public static final String DATABASE_USER = "root"; //$NON-NLS-1$
+	public static final String DATABASE_PASSWORD = ""; //$NON-NLS-1$
 	public static final String CONNECTION_STRING = "jdbc:mysql://localhost:3306/posdb?characterEncoding=UTF-8"; //$NON-NLS-1$
 	public static final String DATABASE_PROVIDER_NAME = "MySQL"; //$NON-NLS-1$
 	

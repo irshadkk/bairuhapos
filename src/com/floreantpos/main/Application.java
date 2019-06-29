@@ -161,7 +161,7 @@ public class Application {
 
             DatabaseUtil.checkConnection(DatabaseUtil.initialize());
             DatabaseUtil.updateLegacyDatabase();
-            LicenceUtil.checkLicenceValidity();
+//            LicenceUtil.checkLicenceValidity();
 
             initTerminal();
             initOrderTypes();
