@@ -26,13 +26,13 @@ import com.floreantpos.PosLog;
 
 public class AppConfig {
 	
-	public static final String DATABASE_URL = "localhost"; //$NON-NLS-1$
-	public static final String DATABASE_PORT = "3306"; //$NON-NLS-1$
-	public static final String DATABASE_NAME = "posdb"; //$NON-NLS-1$
-	public static final String DATABASE_USER = "floreant"; //$NON-NLS-1$
-	public static final String DATABASE_PASSWORD = "floreant"; //$NON-NLS-1$
-	public static final String CONNECTION_STRING = "jdbc:mysql://localhost:3306/posdb?characterEncoding=UTF-8"; //$NON-NLS-1$
-	public static final String DATABASE_PROVIDER_NAME = "MySQL"; //$NON-NLS-1$
+	public static final String DATABASE_URL = "database_url"; //$NON-NLS-1$
+	public static final String DATABASE_PORT = "database_port"; //$NON-NLS-1$
+	public static final String DATABASE_NAME = "database_name"; //$NON-NLS-1$
+	public static final String DATABASE_USER = "database_user"; //$NON-NLS-1$
+	public static final String DATABASE_PASSWORD = "database_pass"; //$NON-NLS-1$
+	public static final String CONNECTION_STRING = "connection_string"; //$NON-NLS-1$
+	public static final String DATABASE_PROVIDER_NAME = "database_provider_name"; //$NON-NLS-1$
 	
 	private static final String KITCHEN_PRINT_ON_ORDER_SETTLE = "kitchen_print_on_order_settle"; //$NON-NLS-1$
 	private static final String KITCHEN_PRINT_ON_ORDER_FINISH = "kitchen_print_on_order_finish"; //$NON-NLS-1$
@@ -90,15 +90,15 @@ public class AppConfig {
 	}
 	
 	public static String getDatabaseHost() {
-		return config.getString(DATABASE_URL, DATABASE_URL); //$NON-NLS-1$
+		return config.getString(DATABASE_URL, "localhost"); //$NON-NLS-1$
 	}
 	
 	public static void setDatabaseHost(String url) {
-		config.setProperty(DATABASE_URL, DATABASE_URL);
+		config.setProperty(DATABASE_URL, url);
 	}
 
 	public static String getConnectString() {
-		return config.getString(CONNECTION_STRING, CONNECTION_STRING);  //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+		return config.getString(CONNECTION_STRING, Database.DERBY_SINGLE.getConnectString("", "", ""));  //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 	}
 	
 	public static void setConnectString(String connectionString) {
@@ -106,7 +106,7 @@ public class AppConfig {
 	}
 	
 	public static String getDatabasePort() {
-		return config.getString(DATABASE_PORT, DATABASE_PORT);
+		return config.getString(DATABASE_PORT, null);
 	}
 	
 	public static void setDatabasePort(String port) {
@@ -114,7 +114,7 @@ public class AppConfig {
 	}
 	
 	public static String getDatabaseName() {
-		return config.getString(DATABASE_NAME, DATABASE_NAME); //$NON-NLS-1$
+		return config.getString(DATABASE_NAME, "posdb"); //$NON-NLS-1$
 	}
 	
 	public static void setDatabaseName(String name) {
@@ -122,7 +122,7 @@ public class AppConfig {
 	}
 	
 	public static String getDatabaseUser() {
-		return config.getString(DATABASE_USER, DATABASE_USER); //$NON-NLS-1$
+		return config.getString(DATABASE_USER, "app"); //$NON-NLS-1$
 	}
 	
 	public static void setDatabaseUser(String user) {
@@ -130,7 +130,7 @@ public class AppConfig {
 	}
 	
 	public static String getDatabasePassword() {
-		return config.getString(DATABASE_PASSWORD, DATABASE_PASSWORD); //$NON-NLS-1$
+		return config.getString(DATABASE_PASSWORD, "sa"); //$NON-NLS-1$
 	}
 	
 	public static void setDatabasePassword(String password) {
@@ -142,7 +142,7 @@ public class AppConfig {
 	}
 	
 	public static String getDatabaseProviderName() {
-		return config.getString(DATABASE_PROVIDER_NAME, DATABASE_PROVIDER_NAME); //$NON-NLS-1$
+		return config.getString(DATABASE_PROVIDER_NAME, Database.DERBY_SINGLE.getProviderName()); //$NON-NLS-1$
 	}
 	
 	public static Database getDefaultDatabase() {

@@ -161,7 +161,7 @@ public class Application {
 
             DatabaseUtil.checkConnection(DatabaseUtil.initialize());
             DatabaseUtil.updateLegacyDatabase();
-            LicenceUtil.checkLicenceValidity();
+//            LicenceUtil.checkLicenceValidity();
 
             initTerminal();
             initOrderTypes();
@@ -185,7 +185,7 @@ public class Application {
                 new PosServer();
             }
         } catch (DatabaseConnectionException e) {
-            LicenceUtil.checkLicenceValidity();
+//            LicenceUtil.checkLicenceValidity();
             e.printStackTrace();
             PosLog.error(getClass(), e);
 

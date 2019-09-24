@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.floreantpos</groupId>
-	<artifactId>floreantpos</artifactId>
+	<artifactId>bairuhapos</artifactId>
 	<version>1.4-SNAPSHOT</version>
 
 	<properties>
@@ -14,7 +14,7 @@
 
 	<build>
 		<sourceDirectory>src</sourceDirectory>
-		<finalName>floreantpos</finalName>
+		<finalName> bairuhapos </finalName>
 		<resources>
 			<resource>
 				<directory>src</directory>
@@ -361,13 +361,38 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-
-		<dependency>
+                <dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.30</version>
-		</dependency>
-		<dependency>
+			<!--<version>8.0.15</version>-->
+                        <version>8.0.16</version>
+                        <!--<version>5.1.30</version>-->
+		</dependency> 
+                <dependency>
+    <groupId>javax.activation</groupId>
+    <artifactId>activation</artifactId>
+    <version>1.1.1</version>
+</dependency>
+                <!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+<dependency>
+    <groupId>javax.xml.bind</groupId>
+    <artifactId>jaxb-api</artifactId>
+    <version>2.3.0</version>
+</dependency> 
+
+
+<dependency>
+    <groupId>com.sun.xml.bind</groupId>
+    <artifactId>jaxb-impl</artifactId>
+    <version>2.2.11</version>
+</dependency>
+
+<dependency>
+    <groupId>com.sun.xml.bind</groupId>
+    <artifactId>jaxb-core</artifactId>
+    <version>2.2.11</version>
+</dependency>
+<dependency>
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>
 			<version>1.9</version>
@@ -542,4 +567,5 @@
 			</properties>
 		</profile>
 	</profiles>
+    <name>bairuhapos</name>
 </project>
